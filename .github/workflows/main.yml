@@ -11,8 +11,8 @@ jobs:
     MY_VARIABLE: "This is a variable!"
 
     steps: 
-      - name : Hello
-      - run: echo "Hello, Github Actions "
+      -name: Hello
+      -run: echo "Hello, Github Actions "
 
-      - name: My_variable
-      - run: echo "MY_VARIABLE is ${{ env.MY_VARIABLE }}"
+      -name: My_variable
+      -run: echo "MY_VARIABLE is ${{ env.MY_VARIABLE }}"
