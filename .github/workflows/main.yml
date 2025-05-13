@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-    MY_VARIABLE: "This is a variable!"
+      MY_VARIABLE: "This is a variable!"
 
     steps: 
       - name: Hello
