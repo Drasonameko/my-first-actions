@@ -6,5 +6,10 @@ on:
 jobs: 
   say-hello: 
     runs-on: ubuntu-latest
+
+  env:
+    MY_ENV_VAR: "This is a variable!"
+
     steps: 
       - run: echo "Hello, Github Actions "
+      - run: echo $MY_ENV_VAR
