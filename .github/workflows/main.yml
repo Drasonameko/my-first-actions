@@ -12,7 +12,7 @@ jobs:
 
     steps: 
       -name: Hello
-      -run: echo "Hello, Github Actions "
+      run: echo "Hello, Github Actions"
 
       -name: My_variable
-      -run: echo "MY_VARIABLE is ${{ env.MY_VARIABLE }}"
+      run: echo "MY_VARIABLE is ${{ env.MY_VARIABLE }}"
