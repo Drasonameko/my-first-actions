@@ -6,7 +6,7 @@ on:
 jobs: 
   say-hello: 
     runs-on: ubuntu-latest
-
+    
     env:
       MY_VARIABLE: "This is a variable!"
 
@@ -16,3 +16,6 @@ jobs:
 
       - name: My_variable
         run: echo "MY_VARIABLE is ${{ env.MY_VARIABLE }}"
+
+      - name: My_secret
+        run: echo "MY_SECRET is ${{ secrets.MY_SECRET }}"
