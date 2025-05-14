@@ -19,3 +19,9 @@ jobs:
 
       - name: My_secret
         run: echo "MY_SECRET is ${{ secrets.MY_SECRET }}"
+
+      - name: Créer un fichier
+        run: echo "Hello, world!" > hello.txt
+
+      - name: Afficher le contenu de hello.txt
+        run: cat hello.txt
