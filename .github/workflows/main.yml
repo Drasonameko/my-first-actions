@@ -4,12 +4,9 @@ on:
     branches:
       - main
 jobs: 
-  say-hello: 
+  Job1: 
     runs-on: ubuntu-latest
     
-    env:
-      MY_VARIABLE: "This is a variable!"
-
     steps: 
       - name: Checkout code
         uses: actions/checkout@v4
@@ -24,15 +21,14 @@ jobs:
 
       - name: Run tests
         run: npm test
+  Job2:
+    needs: Job1
+    runs-on: ubuntu-latest 
 
-      - name: Hello
-        run: echo "Hello, Github Actions"
+    env:
+      MY_VARIABLE: "This is a variable!"
 
-      - name: My_variable
-        run: echo "MY_VARIABLE is ${{ env.MY_VARIABLE }}"
+    steps:
 
-      - name: Créer un fichier
-        run: echo "Hello, world!" > hello.txt
-
-      - name: Afficher le contenu de hello.txt
-        run: cat hello.txt
+      - name: second job
+        run: echo "Second job running!"
