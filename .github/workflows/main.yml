@@ -26,4 +26,3 @@ jobs:
         run: npm run coveralls
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKERN }}
-      
