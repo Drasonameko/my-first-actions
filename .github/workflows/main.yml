@@ -31,9 +31,6 @@ jobs:
       - name: My_variable
         run: echo "MY_VARIABLE is ${{ env.MY_VARIABLE }}"
 
-      - name: My_secret
-        run: echo "MY_SECRET is ${{ secrets.MY_SECRET }}"
-
       - name: Créer un fichier
         run: echo "Hello, world!" > hello.txt
 
